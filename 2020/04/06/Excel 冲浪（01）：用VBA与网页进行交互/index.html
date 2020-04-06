@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/thefox.png">
+  <link rel="icon" type="image/png" href="/img/thefox.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#01579B">
+  <meta name="description" content="我的生活">
+  <meta name="author" content="Frieren Chan">
+  <meta name="keywords" content="">
+  <title>Excel冲浪（01）：用VBA与网页进行交互 - Frieren&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link  rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css" />
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Frieren's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Frieren's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">主页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:frierencn@gmail.com">联系我</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/excel冲浪01cover_post.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <p class="mt-3 post-meta">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  星期一, 四月 6日 2020, 9:27 晚上
+                </p>
+              
+
+              <p class="mt-1">
+                
+                  
+                  <span class="post-meta">
+                    <i class="far fa-chart-bar"></i>
+                    3.2k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta">
+                      <i class="far fa-clock"></i>
+                      12 分钟
+                  </span>
+                
+
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5 z-depth-3" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p
+                class="note note-warning">本文最后更新于：星期一, 四月 6日 2020, 9:43 晚上</p>
+            
+            <div class="markdown-body">
+              <p>最近由于工作需要，开始慢慢接触VBA，为同事制作了几个能解决重复劳动的模板——如果能高效，谁不想要呢？因为这个原因，所以想慢慢更新一个关于Excel（尤其是VBA在Excel中的应用）使用的系列，一方面是自己的总结学习，另一方面或许可以帮到别人。</p>
+<p>VBA终究是一门编程语言，我也不是专业人士，所以我的介绍总是处于某个情境之中（所以通常比较狭隘）、所使用的代码只是为了解决实际问题（所以通常不是最优的，也不够简洁），所以如果你在我任何一篇文章中看到了代码，只要把它当作婴儿的牙牙学语即可——想要说些什么，但总说得不完美。</p>
+<hr>
+<h2 id="情景介绍："><a href="#情景介绍：" class="headerlink" title="情景介绍："></a>情景介绍：</h2><p>负责报销业务的同事需要制作一个报销明细表，里面有报销人的姓名、银行卡号、银行名称和开户行地址（开户行所在地级市）。员工报销费用时，登记的信息是工号、姓名和金额，而银行卡信息是从员工系统中导出来的。有些员工当初提供银行卡信息时没有提供开户行地址，所以我想解决的问题是补充完整这些空白的开户行信息。</p>
+<p>在此之前，我同事的解决方法是：不管他有没有开户行，开户行地址一列全部填上“广州市”（公司所在地）。简单粗暴，但应该是挺好用的，不然他也不会一直用了七八年，直至今年年初更换了财务系统后才让我帮忙重新设计一个模板以满足其报销业务的账务处理需求。</p>
+<p>刚开始我的处理方法是：如果员工提供了开户行地址的，我会把地址中的地级市提取出来；如果没有开户行地址的，也是简单粗暴地填上“广州市”。</p>
+<p>再后来，我无意中在网上发现了一些可以查询开户行地址的网站，例如<a href="http://www.chakahao.com/" target="_blank" rel="noopener">卡号网</a>、<a href="http://www.9527cha.com/" target="_blank" rel="noopener">银行卡号归属地查询</a>等，不过基本都有查询次数限制。后来我在excelhome论坛看到了一篇希望根据银行卡号批量查询开户行地址的<a href="http://club.excelhome.net/thread-1444743-1-1.html" target="_blank" rel="noopener">求助帖</a>，求助者的代码里有提到另一个<a href="http://bank.55cha.com/" target="_blank" rel="noopener">查询网站</a>。这个网站是不限次数，并且其html地址的结构是 <code>http://bank.55cha.com/&quot;银行卡号&quot;.html</code>。这就使问题得到了简化，在VBA中就不需要实现打开网页中输入内容、点击按钮的功能了，直接打开网页然后返回信息就好。</p>
+<h2 id="VBA代码"><a href="#VBA代码" class="headerlink" title="VBA代码"></a>VBA代码</h2><p>我刚开始找到的查询网站是需要输入内容然后点击按钮查询的，所以也查找了如何使用VBA实现网页内容输入和按钮点击的相关内容。下面会以两种方式实现归属地查询功能，第一种是使用IE对象（在网页中输入内容、单击按钮）；另一种是使用HTTP对象（这种方法要更快）。</p>
+<h3 id="IE对象法"><a href="#IE对象法" class="headerlink" title="IE对象法"></a>IE对象法</h3><p>注意：如果你使用360浏览器并将其设置为默认浏览器的话，将会导致该方法失效！</p>
+<p>在写代码之前要先在VBA编辑器的“工具”—“引用”里勾选以下两个引用：</p>
+<ul>
+<li>Microsoft HTML Object Library</li>
+<li>Microsoft Internet Controls</li>
+</ul>
+<p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/Excel冲浪0101.png" srcset="/img/loading.gif" alt=""></p>
+<p>以下VBA代码提供的是一个函数过程，需要1个参数，即银行卡号。相关介绍可见代码注释。</p>
+<pre><code class="lang-VB">Function BankAdress(s As String) &#39; 参数s为银行卡号
+    Dim IE As Object            &#39; 创建一个IE对象
+    Dim myItem As Object        &#39; 创建一个名为myItem的对象用来表示网站中的输入框
+    Dim myButton As Object      &#39; 创建一个名为myButton的对象用来表示网站中的按钮
+    Dim oHEle As HTMLUListElement     &#39; 创建一个 HTML元素 对象，用来存放网页的内容
+
+    Set IE = CreateObject(&quot;InternetExplorer.Application&quot;)
+    With IE
+        .navigate &quot;http://bank.55cha.com/&quot;  &#39; 打开网址
+        .Visible = False &#39; 将IE对象可见性设置为不可见，这样我们就看不到IE浏览器跳出来，但在调试的时候，将其设置为True可以帮助我们了解细节
+        Do Until .readyState = 4 &#39; 等待网站加载完成
+            DoEvents 
+        Loop 
+        Set myItem = .document.getElementById(&quot;q&quot;) &#39; 查看网站源代码可以知道银行卡号码的输入框的id是q
+        myItem.Value = s        &#39; 对输入框进行赋值，s 即是函数需要的参数
+        Set myButton = .document.getElementsByClassName(&quot;s_btn&quot;)(0) &#39;获取确认按钮，由于按钮没有id，所以通过classname获取，在html代码中，classname是可以重复的，所以通过classname将会获得一个数列，需要指定具体是哪个，0就是第一个
+        myButton.Click   
+        Do Until .readyState = 4 &#39; 等待网站查询并加载完成
+            DoEvents 
+        Loop 
+                Set oHEle = oHDoc.getElementsByTagName(&quot;div&quot;).Item(17) &#39;查看网页源代码可知查询结果放在第18个/div/块里面
+    End With 
+
+    Dim ss As String &#39;声明一个字符串ss，用来提取银行卡归属地信息
+        With oHEle &#39; With 语句可以简化代码，上面也用到了
+            ss = .getElementsByTagName(&quot;p&quot;).Item(1).innerHTML &#39;银行卡归属地位于第18个/div/的第2个/p/中（代码中的索引号是从0开始的）
+            If ss Like &quot;*&quot; &amp; &quot;没有&quot; &amp; &quot;*&quot; Then &#39;如果该网站无法查询到银行卡归属地信息，则函数返回默认的“无结果”。
+                BankAdress = &quot;无结果&quot;
+            Else
+                BankAdress = Split(Split(Split(ss, &quot;&lt;span class=&quot;&quot;green&quot;&quot;&gt;&quot;)(2), &quot;- &quot;)(1), &quot;                    &lt;br&gt;&quot;)(0) &amp; &quot;市&quot; &#39;如果能够查询到银行卡归属地，则进一步从/p/标签中将归属地的地级市截取出来
+                &#39;注意：最后一个分割符是：&quot;                    &lt;br&gt;&quot;
+            End If
+    End With
+    &#39; 退出IE（虽然看不到，但IE浏览器实际是在运行的）
+    IE.Quit
+    &#39; 清空对象
+    Set IE = Nothing
+    Set oHEle = Nothing
+    Set myItem = Nothing
+    Set myButton = Nothing
+End Sub
+</code></pre>
+<p>整个函数过程并不复杂，思路也很清晰。“打开浏览器——输入地址——获取输入框和按钮——返回网页元素——从中提取出我们想要的信息”。整个过程唯一麻烦的地方如何在源代码中找到我们想要的元素（如输入框、按钮和查询结果），这个步骤的复杂程度取决于网页HTML文档的结构。我们如何解构HTML文档也会影响到提取信息的复杂程度，上面的代码使用的提取方法算是比较“木讷”的。</p>
+<h3 id="HTTP对象法"><a href="#HTTP对象法" class="headerlink" title="HTTP对象法"></a>HTTP对象法</h3><p>HTTP对象法会比IE对象法快很多（对于配置不好的电脑来说更明显），因为毕竟IE对象法是打开了IE浏览器应用的。本节将会用HTTP对象来获取网页内容，并用一种更加清晰明朗的方式来提取我们想要的信息。</p>
+<pre><code class="lang-vb">Function BankAdress(s As String) As String
+    Dim sSiteName As String
+    Dim ss As String
+    Dim answer As Object
+    Dim HTML As Object
+    Dim XML As Object
+
+    sSiteName = &quot;http://bank.55cha.com/&quot; &amp; s &amp; &quot;.html&quot; &#39;因为网站http://bank.55cha.com/在查询完毕后可以发现其地址会变成 “http://bank.55cha.com/”+我们输入的银行卡号+“.html”，所以我们直接打开网址“http://bank.55cha.com/”+银行卡号+“.html”就可以看到相应的查询结果，所以本方法就无需在网页中输入内容、点击按钮（其实上面IE对象法也可以换成这种地址而除去输入银行卡号和点击按钮的麻烦）
+
+    Set HTML = CreateObject(&quot;htmlfile&quot;)
+    Set XML = CreateObject(&quot;msxml2.xmlhttp&quot;)
+    With XML
+        .Open &quot;get&quot;, sSiteName, False
+        .send
+        HTML.body.innerHTML = .responseText   &#39;.responseText属性可以返回网页代码
+        Set answer = HTML.getElementsByTagName(&quot;DIV&quot;)(17)
+        ss = answer.innerText
+            If ss Like &quot;*&quot; &amp; &quot;没有&quot; &amp; &quot;*&quot; Then
+            BankAdress = &quot;无结果&quot;
+        Else
+            BankAdress = Split(Split(ss, &quot;-&quot;)(1), &quot; &quot; &amp; vbCrLf)(0) &amp; &quot;市&quot;
+        End If
+    End With
+    Set answer = Nothing
+    Set HTML = Nothing
+    Set XML = Nothing
+End Function
+</code></pre>
+<p>下面我们可以看一下html文档对象<code>HTML.body.innerHTML</code>存了啥内容（银行卡信息之后的内容就不展示了）。</p>
+<pre><code class="lang-html">&quot; ...... 省略此前的17个/DIV/
+&lt;DIV class=&quot;&quot;mcon f14 noi&quot;&quot;&gt;
+&lt;P&gt;&lt;IMG alt=中国工商银行 src=&quot;&quot;http://s.55cha.com/bank/icbc.jpg&quot;&quot; width=150 height=30&gt;&lt;/P&gt;
+&lt;P class=l200&gt;&lt;SPAN class=green&gt;银行卡号：&lt;/SPAN&gt;&lt;SPAN class=blue&gt;622208360201221&lt;/SPAN&gt; &lt;BR&gt;&lt;SPAN class=green&gt;归属信息：&lt;/SPAN&gt;广东省 - 广州 &lt;BR&gt;&lt;SPAN class=green&gt;银行名称：&lt;/SPAN&gt;中国工商银行（01020000） &lt;BR&gt;&lt;SPAN class=green&gt;银行卡名：&lt;/SPAN&gt;理财金卡 &lt;BR&gt;&lt;SPAN class=green&gt;银行卡种：&lt;/SPAN&gt;借记卡 &lt;BR&gt;&lt;SPAN class=green&gt;客服电话：&lt;/SPAN&gt;95588 &lt;BR&gt;&lt;SPAN class=green&gt;官方网址：&lt;/SPAN&gt;www.icbc.com.cn &lt;/P&gt;&lt;/DIV&gt;
+&lt;DIV class=&quot;&quot;mcon bt&quot;&quot;&gt;
+&lt;DIV class=gray&gt;中国工商银行622208360201221银行卡信息,银行卡归属地:广东省广州,开户行:中国工商银行,银行卡种:借记卡,银行卡名:理财金卡,银行卡持卡人信息,银行卡身份证信息。&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;
+</code></pre>
+<p>以上的代码显示了截止到出现目标信息的全部内容（让人一头雾水(＠_＠;)）。数一下/DIV/块，可以知道目标信息在第18个/DIV/和第20个/DIV/里都有，使用 <code>.innerText</code>返回这两个标签内的文本，它们的结构如下所示：</p>
+<pre><code class="lang-js">&#39;这是第18个/DIV/的文本
+&quot;
+银行卡号：622208360201221 
+归属信息：广东省 - 广州 
+银行名称：中国工商银行（01020000） 
+银行卡名：理财金卡 
+银行卡种：借记卡 
+客服电话：95588 
+官方网址：www.icbc.com.cn &quot;
+</code></pre>
+<pre><code class="lang-js">&#39;这是第20个/DIV/的文本
+中国工商银行622208360201221银行卡信息,银行卡归属地:广东省广州,开户行:中国工商银行,银行卡种:借记卡,银行卡名:理财金卡,银行卡持卡人信息,银行卡身份证信息。
+</code></pre>
+<p>哪个方便提取目标信息就使用哪个。怎样判断哪个更方便呢？我们提取目标信息的常用方法是使用split函数，将信息层层分割，最终得到目标信息。当然也可以使用excel里的截取函数（例如mid，其引用语法为<code>Application.mid()</code>）。如果要对信息进行分割的话，目标信息前后如果存在特定的字符就好分割，否则就难分割。如果我们想提取的是开户行的地级市（这是我的需求），那第18个/DIV/会方便一些，因为其地级市前面是“<code>-</code>”，后面其实有一个空格加换行符（vbCrLf），即使是直辖市，其结构也是这样的（例如地址为上海的话，会显示“上海市 - 上海”），这种情形下目标信息（地级市）前后的字符都是特定的，所以提取会更方便一些。第20个/DIV/里地级市前面是省级行政区，所以地级市前面的字符可能是省、区、市，而地级市后面的字符倒是固定的“<code>,</code>”，如果要用第20个/DIV/进行提取的话，就需要先对块的内容进行判断，判断省级行政区是以什么字结尾的（省、区或者市），然后再进行分割。（判断的方法：直接判断块里的内容是否含有”省、区、市“三个字符中的一个即可，使用 <code>like</code>进行判断）</p>
+<h2 id="形象地查看HTML文档"><a href="#形象地查看HTML文档" class="headerlink" title="形象地查看HTML文档"></a>形象地查看HTML文档</h2><p>我们如果不懂HTML语言的话，查看VBA程序返回的HTML文档将会是一头雾水——我们很难知道那一块块代码究竟意味着什么，它们对应了网页上的哪些内容。浏览器一般提供了查看网页源代码的工具（按F12可以快速打开源代码视窗），而Chrome浏览器则更进一步，当你把鼠标悬停在某行网页源代码上面时，网页中的相关内容将会进行高亮标注，告诉你这条代码“看起来”是什么样的。（现在chromium内核的Microsoft Edge也可以了）</p>
+<p>这一功能非常好用。在IE对象法里，我就是用这个功能层层递进，最终找到输入框和按钮所对应的代码块的。</p>
+<p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/202001通过Edge的高亮功能寻找输入框的代码_post.png" srcset="/img/loading.gif" alt="通过Edge的高亮功能寻找输入框的代码"></p>
+<p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/202001通过Edge的高亮功能寻找按钮的代码_post.png" srcset="/img/loading.gif" alt="通过Edge的高亮功能寻找按钮的代码"></p>
+<hr>
+<p>本文的代码主要参考（Copy）了以下文章：</p>
+<ul>
+<li><a href="https://blog.csdn.net/lufy_legend/article/details/25191765" target="_blank" rel="noopener">用程序来控制一个网页，实现自动输入等操作</a></li>
+<li><a href="https://www.encodedna.com/excel/extract-contents-from-html-element-of-a-webpage-in-excel-using-vba.htm" target="_blank" rel="noopener">Extract or Get data from HTML Element in Excel using VBA</a> </li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <p>
+                
+                  <span>
+                <i class="iconfont icon-inbox"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/">计算机技术</a>
+                      &nbsp;
+                    
+                  </span>&nbsp;&nbsp;
+                
+                
+                  <span>
+                <i class="iconfont icon-tag"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Excel/">Excel</a>
+                    
+                      <a class="hover-with-bg" href="/tags/VBA/">VBA</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+                    
+                  </span>
+                
+              </p>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2019/03/23/%E4%BA%BA%E4%B8%8E%E7%A4%BE%E4%BC%9A/">
+                        <span class="hidden-mobile">人与社会</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="fa fa-chevron-right"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+              
+                <!-- Comments -->
+                <div class="comments" id="comments">
+                  
+                  
+  <div id="vcomments"></div>
+  <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script type="text/javascript">
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "U4d34WopxrAOY4CjJex3uSwT-gzGzoHsz",
+        app_key: "OAPi8yitontIqqp8vohPWplv",
+        placeholder: "～留言请遵循公序良俗～",
+        avatar: "/retro",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc-start"></div>
+<div id="toc">
+  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var navHeight = $('#navbar').height();
+      var toc = $('#toc');
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+      var tocLimMax = 2 * boardTop + boardCtn.height();
+
+      $(window).scroll(function () {
+        var tocLimMin = $('#toc-start').offset().top - navHeight;
+        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
+
+        if (tocLimMin <= scroH && scroH <= tocLimMax) {
+          toc.css({
+            'display': 'block',
+            'position': 'fixed',
+            'top': navHeight,
+          });
+        } else if (scroH <= tocLimMin) {
+          toc.css({
+            'position': '',
+            'top': '',
+          });
+        } else if (scroH > tocLimMax) {
+          toc.css('display', 'none');
+        }
+      });
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc > p').css('visibility', 'visible');
+      }
+      var offset = boardCtn.css('margin-right')
+      $('#toc-ctn').css({
+        'right': offset
+      })
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Excel冲浪（01）：用VBA与网页进行交互&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
