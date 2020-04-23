@@ -13,30 +13,35 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#01579B">
+  <meta name="theme-color" content="#0E0D10">
   <meta name="description" content="我的生活">
   <meta name="author" content="Frieren Chan">
   <meta name="keywords" content="">
   <title>为个人博客的自定义域名添加HTTPS支持 - Frieren&#39;s Blog</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
 
   <link  rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css" />
 
+
+
+
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
 <!-- 自定义样式保持在最底部 -->
+
+  
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+  
 
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Frieren's Blog" type="application/atom+xml">
@@ -63,65 +68,55 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">主页</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              首页</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">归档</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              归档</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">分类</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              分类</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">标签</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              标签</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">关于</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              关于</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="mailto:frierencn@gmail.com">联系我</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/links/">友链</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">RSS</a>
+            <a class="nav-link" href="/links/">
+              <i class="iconfont icon-link-fill"></i>
+              友链</a>
           </li>
         
         
@@ -139,7 +134,7 @@
          style="background: url('https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/httpvshttps.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -147,31 +142,36 @@
 
             
               
-                <p class="mt-3 post-meta">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  星期四, 三月 21日 2019, 10:57 上午
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2019-03-21 10:57">
+                    星期四, 三月 21日 2019, 10:57 上午
+                  </time>
+                </div>
               
 
-              <p class="mt-1">
+              <div class="mt-1">
                 
                   
-                  <span class="post-meta">
-                    <i class="far fa-chart-bar"></i>
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
                     1.1k 字
                   </span>
                 
 
                 
                   
-                  <span class="post-meta">
-                      <i class="far fa-clock"></i>
-                      4 分钟
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    13
+                     分钟
                   </span>
                 
 
                 
-              </p>
+              </div>
             
           </div>
 
@@ -190,18 +190,19 @@
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5 z-depth-3" id="board">
+        <div class="py-5" id="board">
           <div class="post-content mx-auto" id="post">
             
-              <p
-                class="note note-warning">本文最后更新于：星期五, 十二月 6日 2019, 10:58 晚上</p>
+              <p class="note note-warning">
+                本文最后更新于：星期五, 四月 24日 2020, 1:16 凌晨
+              </p>
             
-            <div class="markdown-body">
-              <h1 id="1-HTTPS-与-HTTP"><a href="#1-HTTPS-与-HTTP" class="headerlink" title="1 HTTPS 与 HTTP"></a>1 HTTPS 与 HTTP</h1><p>HTTP（全称为 Hyper Text Transfer Protocol）中文名叫做<strong>超文本传输协议</strong>，被用于在Web浏览器和网站服务器之间传输信息。HTTP是以<strong>明文方式</strong>发送内容的，并不会对数据进行任何加密，所以当使用HTTP进行传输的信息被截取后，攻击者可以直接读懂其中的信息。正因为如此，虽然个人博客并无什么敏感信息担心会被截取，但是在访问使用HTTP协议的网站时，部分浏览器会提示说“该网站不安全，不要输入密码······”，访问者需要点击“继续”才能访问。浏览器的提示自然也会让访问者担心博客网站是不是真的存在问题，从而可能终止访问。使用HTTPS协议可以解决这一问题，因为HTTPS协议在HTTP的基础上加入了SSL协议，通过SSL来验证服务器的身份并加密信息。此外，HTTPS也可以减少我们个人博客受到攻击和劫持的可能性。并且幸运的是，Github官方在2018年5月1日发布<a href="https://github.blog/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">公告</a>称Github Pages已经<a href="https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-an-alias-or-aname-record-with-your-dns-provider" target="_blank" rel="noopener">为自定义域名提供HTTPS支持</a>，这样一来就不用借助Cloundflare了，并且设置也相当简单。</p>
-<h1 id="2-在-Github-Pages-中启用-Enforce-HTTPS"><a href="#2-在-Github-Pages-中启用-Enforce-HTTPS" class="headerlink" title="2 在 Github Pages 中启用 Enforce HTTPS"></a>2 在 Github Pages 中启用 Enforce HTTPS</h1><p>当然，首先你拥有了一个独立域名（例如我的 <code>frieren.me</code>）。如果你并没有设置独立域名而是使用 Github Pages 默认的<code>yourname.github.io</code>，Enforce HTTPS 功能是默认开启的。关于如何选购独立域名，可以阅读我先前的<a href="https://frieren.xyz/2017/09/18/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%94%E8%AE%B0/">文章</a>（我的域名是在Godaddy购买的，因为阿里云并不提供<code>.me</code>的域名后缀）。当你拥有了独立域名之后，便可开始以下操作了。本文的操作以Godaddy为例。</p>
+            <article class="markdown-body">
+              <h1 id="1-HTTPS-与-HTTP"><a href="#1-HTTPS-与-HTTP" class="headerlink" title="1 HTTPS 与 HTTP"></a>1 HTTPS 与 HTTP</h1><p>HTTP（全称为 Hyper Text Transfer Protocol）中文名叫做<strong>超文本传输协议</strong>，被用于在Web浏览器和网站服务器之间传输信息。HTTP是以<strong>明文方式</strong>发送内容的，并不会对数据进行任何加密，所以当使用HTTP进行传输的信息被截取后，攻击者可以直接读懂其中的信息。正因为如此，虽然个人博客并无什么敏感信息担心会被截取，但是在访问使用HTTP协议的网站时，部分浏览器会提示说“该网站不安全，不要输入密码······”，访问者需要点击“继续”才能访问。浏览器的提示自然也会让访问者担心博客网站是不是真的存在问题，从而可能终止访问。使用HTTPS协议可以解决这一问题，因为HTTPS协议在HTTP的基础上加入了SSL协议，通过SSL来验证服务器的身份并加密信息。此外，HTTPS也可以减少我们个人博客受到攻击和劫持的可能性。并且幸运的是，Github官方在2018年5月1日发布<span class="label label-default"><a href="https://github.blog/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">公告</a></span>称Github Pages已经<span class="label label-default"><a href="https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-an-alias-or-aname-record-with-your-dns-provider" target="_blank" rel="noopener">为自定义域名提供HTTPS支持</a></span>，这样一来就不用借助Cloundflare了，并且设置也相当简单。</p>
+<h1 id="2-在-Github-Pages-中启用-Enforce-HTTPS"><a href="#2-在-Github-Pages-中启用-Enforce-HTTPS" class="headerlink" title="2 在 Github Pages 中启用 Enforce HTTPS"></a>2 在 Github Pages 中启用 Enforce HTTPS</h1><p>当然，首先你拥有了一个独立域名（例如我的 <code>frieren.me</code>）。如果你并没有设置独立域名而是使用 Github Pages 默认的<code>yourname.github.io</code>，Enforce HTTPS 功能是默认开启的。关于如何选购独立域名，可以阅读我先前的<span class="label label-default"><a href="https://frieren.xyz/2017/09/18/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%94%E8%AE%B0/">文章</a></span>（我的域名是在Godaddy购买的，因为阿里云并不提供<code>.me</code>的域名后缀）。当你拥有了独立域名之后，便可开始以下操作了。本文的操作以Godaddy为例。</p>
 <p>（1） 进入你的域名管理页面，点击DNS选项进入DNS配置页面：</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/Godaddy伤管理域名的DNS.jpg" srcset="/img/loading.gif" alt="Godaddy上管理域名的DNS"></p>
-<p>（２）根据Github的<a href="https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-an-alias-or-aname-record-with-your-dns-provider" target="_blank" rel="noopener">帮助文件</a>，添加以下四条<code>A记录</code>：</p>
+<p>（２）根据Github的<span class="label label-default"><a href="https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-an-alias-or-aname-record-with-your-dns-provider" target="_blank" rel="noopener">帮助文件</a></span>，添加以下四条<code>A记录</code>：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -261,30 +262,29 @@ permalink_defaults:
 <hr>
 <p>以上操作如无意外，应该可以完成HTTPS的设置了。😀</p>
 
-            </div>
+            </article>
             <hr>
             <div>
-              <p>
+              <div class="post-metas mb-3">
                 
-                  <span>
-                <i class="iconfont icon-inbox"></i>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
                     
                       <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/">计算机技术</a>
-                      &nbsp;
                     
-                  </span>&nbsp;&nbsp;
+                  </div>
                 
                 
-                  <span>
-                <i class="iconfont icon-tag"></i>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
                     
                       <a class="hover-with-bg" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
                     
-                  </span>
+                  </div>
                 
-              </p>
+              </div>
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
               
@@ -293,8 +293,8 @@ permalink_defaults:
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2019/03/23/%E4%BA%BA%E4%B8%8E%E7%A4%BE%E4%BC%9A/">
-                        <i class="fa fa-chevron-left"></i>
+                      <a href="/20190323a01/">
+                        <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">人与社会</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
@@ -303,10 +303,10 @@ permalink_defaults:
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2019/03/20/Hexo-Material-Theme-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BC%98%E5%8C%96/">
+                      <a href="/20190320c01/">
                         <span class="hidden-mobile">Hexo-Material Theme 的一些设置和优化</span>
                         <span class="visible-mobile">下一篇</span>
-                        <i class="fa fa-chevron-right"></i>
+                        <i class="iconfont icon-arrowright"></i>
                       </a>
                     
                   </div>
@@ -314,20 +314,22 @@ permalink_defaults:
               
             </div>
 
-              
-                <!-- Comments -->
-                <div class="comments" id="comments">
-                  
-                  
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
   <div id="vcomments"></div>
   <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script defer src="https://cdn.staticfile.org/valine/1.3.10/Valine.min.js" ></script>
 
   <script type="text/javascript">
     var notify = 'false' === 'true';
     var verify = 'false' === 'true';
-    var oldLoad = window.onload;
+    var oldLoadVa = window.onload;
     window.onload = function () {
+      oldLoadVa && oldLoadVa();
+
       new Valine({
         el: '#vcomments',
         notify: notify,
@@ -336,27 +338,25 @@ permalink_defaults:
         app_key: "OAPi8yitontIqqp8vohPWplv",
         placeholder: "～留言请遵循公序良俗～",
         avatar: "/retro",
-        meta: ['nick', 'mail', 'link'],
+        meta: ["nick","mail","link"],
         pageSize: "10",
       });
-      oldLoad && oldLoad();
     };
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
       powered by Valine.</a></noscript>
 
 
-                </div>
-              
+              </div>
+            
           </div>
         </div>
       </div>
     </div>
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc-start"></div>
-<div id="toc">
-  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div id="tocbot"></div>
 </div>
 
@@ -372,8 +372,8 @@ permalink_defaults:
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -408,9 +408,10 @@ permalink_defaults:
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
       <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
     </div>
     
 
@@ -422,9 +423,7 @@ permalink_defaults:
 
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
 <script  src="/js/main.js" ></script>
 
 
@@ -436,31 +435,9 @@ permalink_defaults:
   <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
   <script>
     $(document).ready(function () {
-      var navHeight = $('#navbar').height();
-      var toc = $('#toc');
       var boardCtn = $('#board-ctn');
       var boardTop = boardCtn.offset().top;
-      var tocLimMax = 2 * boardTop + boardCtn.height();
 
-      $(window).scroll(function () {
-        var tocLimMin = $('#toc-start').offset().top - navHeight;
-        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
-
-        if (tocLimMin <= scroH && scroH <= tocLimMax) {
-          toc.css({
-            'display': 'block',
-            'position': 'fixed',
-            'top': navHeight,
-          });
-        } else if (scroH <= tocLimMin) {
-          toc.css({
-            'position': '',
-            'top': '',
-          });
-        } else if (scroH > tocLimMax) {
-          toc.css('display', 'none');
-        }
-      });
       tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post-content',
@@ -470,16 +447,13 @@ permalink_defaults:
         listClass: 'tocbot-list',
         isCollapsedClass: 'tocbot-is-collapsed',
         collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
         scrollSmooth: true,
         headingsOffset: -boardTop
       });
       if ($('.toc-list-item').length > 0) {
-        $('#toc > p').css('visibility', 'visible');
+        $('#toc').css('visibility', 'visible');
       }
-      var offset = boardCtn.css('margin-right')
-      $('#toc-ctn').css({
-        'right': offset
-      })
     });
   </script>
 
@@ -489,10 +463,6 @@ permalink_defaults:
 
   <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
   <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
 
 
 
@@ -506,7 +476,13 @@ permalink_defaults:
   <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
@@ -562,17 +538,25 @@ permalink_defaults:
 
 
 
-  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
 
 
 

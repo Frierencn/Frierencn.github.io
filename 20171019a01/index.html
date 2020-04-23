@@ -13,30 +13,35 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#01579B">
+  <meta name="theme-color" content="#0E0D10">
   <meta name="description" content="我的生活">
   <meta name="author" content="Frieren Chan">
   <meta name="keywords" content="">
   <title>一个数学问题：圆与矩形 - Frieren&#39;s Blog</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
 
   <link  rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css" />
 
+
+
+
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
 <!-- 自定义样式保持在最底部 -->
+
+  
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+  
 
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Frieren's Blog" type="application/atom+xml">
@@ -63,65 +68,55 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">主页</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              首页</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">归档</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              归档</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">分类</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              分类</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">标签</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              标签</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">关于</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              关于</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="mailto:frierencn@gmail.com">联系我</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/links/">友链</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">RSS</a>
+            <a class="nav-link" href="/links/">
+              <i class="iconfont icon-link-fill"></i>
+              友链</a>
           </li>
         
         
@@ -139,7 +134,7 @@
          style="background: url('https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/HarryPotter.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -147,31 +142,36 @@
 
             
               
-                <p class="mt-3 post-meta">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  星期四, 十月 19日 2017, 11:29 晚上
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2017-10-19 23:29">
+                    星期四, 十月 19日 2017, 11:29 晚上
+                  </time>
+                </div>
               
 
-              <p class="mt-1">
+              <div class="mt-1">
                 
                   
-                  <span class="post-meta">
-                    <i class="far fa-chart-bar"></i>
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
                     1.7k 字
                   </span>
                 
 
                 
                   
-                  <span class="post-meta">
-                      <i class="far fa-clock"></i>
-                      6 分钟
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    20
+                     分钟
                   </span>
                 
 
                 
-              </p>
+              </div>
             
           </div>
 
@@ -190,13 +190,14 @@
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5 z-depth-3" id="board">
+        <div class="py-5" id="board">
           <div class="post-content mx-auto" id="post">
             
-              <p
-                class="note note-warning">本文最后更新于：星期五, 十二月 6日 2019, 10:39 晚上</p>
+              <p class="note note-warning">
+                本文最后更新于：星期五, 四月 24日 2020, 1:08 凌晨
+              </p>
             
-            <div class="markdown-body">
+            <article class="markdown-body">
               <h1 id="1-问题"><a href="#1-问题" class="headerlink" title="1 问题"></a>1 问题</h1><p>一天傍晚，我给自己的电脑换了一张壁纸。壁纸是暗红色的背景，中间是哈利波特的眼镜👓和他额头上的闪电疤痕。当我用鼠标摁住圆形的眼睛框然后往眼镜框上的另一点移动时，这时出现了一个以鼠标起点和终点为对角线的矩形。</p>
 <p>于是我就想到了这个问题：</p>
 <p><strong>如果在一个圆上找一定点，记为点A，然后另一个点——动点B——从点A出发，绕圆一周。若以线段AB为对角线作矩形ABCD，则可以得到无数多个这样的矩形。问题是：这些矩形的面积之和是多少？</strong></p>
@@ -213,7 +214,7 @@
 <li><p><strong>所有矩形的面积之和</strong>：</p>
 <script type="math/tex; mode=display">SS_{ABCD}=2*\int_{-1}^1 S_{ABCD} {\rm d}x=2*\int_{-1}^1 {(1-x) * \sqrt[] {1-x^2}} {\rm d}x</script></li>
 </ul>
-<p>我们可以使用一些<a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener">作图工具</a>把 $S_{ABCD}$ 的图像绘制出来，这样我们对矩形面积的变化会有一个直观的认识。</p>
+<p>我们可以使用一些<span class="label label-default"><a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener">作图工具</a></span>把 $S_{ABCD}$ 的图像绘制出来，这样我们对矩形面积的变化会有一个直观的认识。</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/矩型面积的函数图像.jpg" srcset="/img/loading.gif" alt="矩形面积的函数图像"></p>
 <p>从 $S_{ABCD} =(1−x)∗ \sqrt[] {1-x^2}$ 的图像可以总结出一些特征：</p>
 <ul>
@@ -227,48 +228,47 @@
 <li>函数 $S_{ABCD}$ 的<strong>最大值</strong>在 $x=−\frac{r}{2}$ 时取得；</li>
 <li>$S_{ABCD}(0)=r^2$ .</li>
 </ul>
-<p><strong>接下来</strong> ，我们需要对 $S_{ABCD} =(1−x)∗ \sqrt[] {1-x^2}$ 进行积分。<strong>我们并不需要自己手动计算</strong>，许多网站和软件可以帮助我们做这些工作。我通过<a href="http://zh.numberempire.com/" target="_blank" rel="noopener"><strong>数字帝国</strong></a>网站的<a href="http://zh.numberempire.com/integralcalculator.php" target="_blank" rel="noopener"><strong>不定积分计算器</strong></a>可以算得其不定积分是：</p>
+<p><strong>接下来</strong> ，我们需要对 $S_{ABCD} =(1−x)∗ \sqrt[] {1-x^2}$ 进行积分。<strong>我们并不需要自己手动计算</strong>，许多网站和软件可以帮助我们做这些工作。我通过<span class="label label-default"><a href="http://zh.numberempire.com/" target="_blank" rel="noopener"><strong>数字帝国</strong></a></span>网站的<span class="label label-default"><a href="http://zh.numberempire.com/integralcalculator.php" target="_blank" rel="noopener"><strong>不定积分计算器</strong></a></span>可以算得其不定积分是：</p>
 <script type="math/tex; mode=display">\int {(1-x) * \sqrt[] {1-x^2}} {\rm d}x = -\frac{\sqrt[]{1-x^2}*(2x^2-3x-2)-3arcsin x}{6}</script><p>将情形拓广，对 $S_{ABCD} =(r−x)∗ \sqrt[] {r^2-x^2}$ 进行积分，可以得到：</p>
 <script type="math/tex; mode=display">\int {(r-x) * \sqrt[] {r^2-x^2}} {\rm d}x = -\frac{\sqrt[]{r^2-x^2}*(2x^2-3rx-2)-3r^3arcsin(\frac{x}{r})}{6}</script><p>如果对 $S_{ABCD} =(r−x)∗ \sqrt[] {r^2-x^2}$ 在$(-r,r)$上进行积分，可得：</p>
 <script type="math/tex; mode=display">\int_{-r}^r {(r-x) * \sqrt[] {r^2-x^2}} {\rm d}x = \left. -\frac{\sqrt[]{r^2-x^2}*(2x^2-3rx-2)-3r^3arcsin(\frac{x}{r})}{6} \right| _{-r}^r=\frac{r^3}{2}\pi</script><p><strong>所以</strong> ，</p>
 <script type="math/tex; mode=display">SS_{ABCD}=2*\int_{-r}^r S_{ABCD} {\rm d}x=2*\int_{-r}^r {(r-x) * \sqrt[] {r^2-x^2}} {\rm d}x=2*\frac{r^3}{2}\pi=r^3\pi</script><p><strong>我们并不需要把注意力放在那些长长的算式上</strong> ，我们只需关注结果就行。一般而言，$SS_{ABCD}=r^3\pi$ .这也就是说，纵使<strong>动点B</strong>的运动可以产生无数个矩形，但是这<strong>无数</strong>个矩形的面积却是<strong>有限</strong>的，并且这个有限的数只是比圆的面积大 $r$ 倍。在我们选取的单位圆特例中，$r=1$ ,可得 $SS_{ABCD}=\pi=S_{单位元}$. 在单位圆里，这无限个矩形的面积之和甚至不能大于圆的面积，神奇之处还在于它刚好等于单位圆的面积，也就是 $\pi$ . 这也相当于给了我们一个估算 $\pi$ 的途径，我们可以找足够多的矩形出来（找多少个取决于我们希望求得的关于 $\pi$ 的精确度），只需把它们的面积加起来就行。此外，因为 $r^3\pi$ 里面有 $r^3$ ,我们很难不将它和体积联系起来。半径为 $r$ 的球的体积 $V=\frac{4}{3}r^3\pi$, 所以在半径为 $r$ 的圆上得到的那无数个矩形的面积，和半径为 $r$ 的球的体积只是相差一个常数倍，这个常数是 $\frac{4}{3}$ .</p>
-<h1 id="3-后记"><a href="#3-后记" class="headerlink" title="3 后记"></a>3 后记</h1><p>钱德拉塞卡在其所作的名为<a href="http://www.xys.org/xys/ebooks/others/science/philosophy/kexuemei.txt" target="_blank" rel="noopener"><strong>《科学中的美和对美的追求》</strong></a>的演讲中旁征博引，他谈到：</p>
-<blockquote>
-<p>戴森曾引用韦尔的话：“<strong>我的劳作是努力把真和美统一起来；如果我不得不选择其中之一，我常常选择美</strong>。”我要问一问戴森：韦尔是否举过他为了美而牺牲真的例子？我了解到韦尔举得例子是他的引力度规论，这个理论是在他的《时空问题》中提出来的。显然，韦尔确信这个理论作为一个引力理论是不真的；但它是那样美以至于他不愿放弃它，因此他为了它的美而不让它消亡。但很久以后，度规不变性的形式系统被纳入量子电动力学，证明韦尔的本能直觉是完全正确的。</p>
-</blockquote>
+<h1 id="3-后记"><a href="#3-后记" class="headerlink" title="3 后记"></a>3 后记</h1><p>钱德拉塞卡在其所作的名为<span class="label label-default"><a href="http://www.xys.org/xys/ebooks/others/science/philosophy/kexuemei.txt" target="_blank" rel="noopener"><strong>《科学中的美和对美的追求》</strong></a></span>的演讲中旁征博引，他谈到：</p>
+<div class="note note-success">
+            <p>戴森曾引用韦尔的话：“<strong>我的劳作是努力把真和美统一起来；如果我不得不选择其中之一，我常常选择美</strong>。”我要问一问戴森：韦尔是否举过他为了美而牺牲真的例子？我了解到韦尔举得例子是他的引力度规论，这个理论是在他的《时空问题》中提出来的。显然，韦尔确信这个理论作为一个引力理论是不真的；但它是那样美以至于他不愿放弃它，因此他为了它的美而不让它消亡。但很久以后，度规不变性的形式系统被纳入量子电动力学，证明韦尔的本能直觉是完全正确的。</p>
+          </div>
 <p>然后，他又引用了济慈的话：</p>
-<blockquote>
-<p>正如济慈在很久以前看到的：“<strong>凡想象认作美的东西一定是真理，不论它以前存在与否。</strong>”</p>
-</blockquote>
+<div class="note note-success">
+            <p>正如济慈在很久以前看到的：“<strong>凡想象认作美的东西一定是真理，不论它以前存在与否。</strong>”</p>
+          </div>
 <hr>
 <p>最后，我想分享几篇我在写作时参考过的文章：</p>
-<p><a href="http://oiltang.com/2014/05/04/markdown-and-mathjax/" target="_blank" rel="noopener"><strong>Markdown输入数学公式</strong></a>，这篇文章讲述了如何使用LaTex编写数学公式，给出了LaTex的许多语法，它们让我轻松地编写本文中的所有公式。</p>
-<p><a href="https://monkey0105.github.io/2017/09/21/hexo-mathjax/" target="_blank" rel="noopener"><strong>Hexo博客数学公式显示</strong></a>，这篇文章排版精美，内容全面，从如何在博客中显示公式到如何编写公式一应俱全！</p>
+<p><span class="label label-default"><a href="http://oiltang.com/2014/05/04/markdown-and-mathjax/" target="_blank" rel="noopener"><strong>Markdown输入数学公式</strong></a></span>，这篇文章讲述了如何使用LaTex编写数学公式，给出了LaTex的许多语法，它们让我轻松地编写本文中的所有公式。</p>
+<p><span class="label label-default"><a href="https://monkey0105.github.io/2017/09/21/hexo-mathjax/" target="_blank" rel="noopener"><strong>Hexo博客数学公式显示</strong></a></span>，这篇文章排版精美，内容全面，从如何在博客中显示公式到如何编写公式一应俱全！</p>
 
-            </div>
+            </article>
             <hr>
             <div>
-              <p>
+              <div class="post-metas mb-3">
                 
-                  <span>
-                <i class="iconfont icon-inbox"></i>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
                     
                       <a class="hover-with-bg" href="/categories/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6/">自然科学</a>
-                      &nbsp;
                     
-                  </span>&nbsp;&nbsp;
+                  </div>
                 
                 
-                  <span>
-                <i class="iconfont icon-tag"></i>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
                     
                       <a class="hover-with-bg" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">微积分</a>
                     
-                  </span>
+                  </div>
                 
-              </p>
+              </div>
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
               
@@ -277,8 +277,8 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2017/10/31/SWOT%E7%9F%A9%E9%98%B5%EF%BC%9A%E6%88%98%E7%95%A5%E5%8F%8A%E5%85%B6%E4%BE%9D%E6%8D%AE/">
-                        <i class="fa fa-chevron-left"></i>
+                      <a href="/20171031a02/">
+                        <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">SWOT矩阵：战略及其依据</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
@@ -287,10 +287,10 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2017/09/18/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%94%E8%AE%B0/">
+                      <a href="/20170918c01/">
                         <span class="hidden-mobile">使用 Hexo+Github Pages 搭建个人博客的笔记</span>
                         <span class="visible-mobile">下一篇</span>
-                        <i class="fa fa-chevron-right"></i>
+                        <i class="iconfont icon-arrowright"></i>
                       </a>
                     
                   </div>
@@ -298,20 +298,22 @@
               
             </div>
 
-              
-                <!-- Comments -->
-                <div class="comments" id="comments">
-                  
-                  
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
   <div id="vcomments"></div>
   <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script defer src="https://cdn.staticfile.org/valine/1.3.10/Valine.min.js" ></script>
 
   <script type="text/javascript">
     var notify = 'false' === 'true';
     var verify = 'false' === 'true';
-    var oldLoad = window.onload;
+    var oldLoadVa = window.onload;
     window.onload = function () {
+      oldLoadVa && oldLoadVa();
+
       new Valine({
         el: '#vcomments',
         notify: notify,
@@ -320,27 +322,25 @@
         app_key: "OAPi8yitontIqqp8vohPWplv",
         placeholder: "～留言请遵循公序良俗～",
         avatar: "/retro",
-        meta: ['nick', 'mail', 'link'],
+        meta: ["nick","mail","link"],
         pageSize: "10",
       });
-      oldLoad && oldLoad();
     };
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
       powered by Valine.</a></noscript>
 
 
-                </div>
-              
+              </div>
+            
           </div>
         </div>
       </div>
     </div>
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc-start"></div>
-<div id="toc">
-  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div id="tocbot"></div>
 </div>
 
@@ -356,8 +356,8 @@
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -392,9 +392,10 @@
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
       <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
     </div>
     
 
@@ -406,9 +407,7 @@
 
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
 <script  src="/js/main.js" ></script>
 
 
@@ -420,31 +419,9 @@
   <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
   <script>
     $(document).ready(function () {
-      var navHeight = $('#navbar').height();
-      var toc = $('#toc');
       var boardCtn = $('#board-ctn');
       var boardTop = boardCtn.offset().top;
-      var tocLimMax = 2 * boardTop + boardCtn.height();
 
-      $(window).scroll(function () {
-        var tocLimMin = $('#toc-start').offset().top - navHeight;
-        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
-
-        if (tocLimMin <= scroH && scroH <= tocLimMax) {
-          toc.css({
-            'display': 'block',
-            'position': 'fixed',
-            'top': navHeight,
-          });
-        } else if (scroH <= tocLimMin) {
-          toc.css({
-            'position': '',
-            'top': '',
-          });
-        } else if (scroH > tocLimMax) {
-          toc.css('display', 'none');
-        }
-      });
       tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post-content',
@@ -454,16 +431,13 @@
         listClass: 'tocbot-list',
         isCollapsedClass: 'tocbot-is-collapsed',
         collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
         scrollSmooth: true,
         headingsOffset: -boardTop
       });
       if ($('.toc-list-item').length > 0) {
-        $('#toc > p').css('visibility', 'visible');
+        $('#toc').css('visibility', 'visible');
       }
-      var offset = boardCtn.css('margin-right')
-      $('#toc-ctn').css({
-        'right': offset
-      })
     });
   </script>
 
@@ -473,10 +447,6 @@
 
   <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
   <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
 
 
 
@@ -490,7 +460,13 @@
   <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
@@ -546,17 +522,21 @@
 
 
 
-  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
 
 
 
@@ -590,6 +570,10 @@
     <script  src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" ></script>
 
   
+
+
+
+
 
 
 

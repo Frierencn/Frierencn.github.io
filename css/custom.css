@@ -1,0 +1,33 @@
+img {
+  filter: brightness(75%);
+}
+/* 归档页 */
+.list-group-item {
+  color: #d3d3d3;
+  background-color: #1c1824;
+}
+.list-group-item:hover,
+.tagcloud a:hover {
+  color: #fff1b9;
+  background-color: #342c53;
+}
+/* 友链页 */
+.links .card {
+  background-color: #1c1824;
+}
+.links .card-body:hover {
+  background-color: #342c53;
+}
+.links .link-title,
+.links .link-intro {
+  color: #d3d3d3;
+}
+.navbar a {
+  color: #d3d3d3 !important;
+}
+/* 打字机 */
+#subtitle,
+.dark.typed-cursor--blink,
+.scroll-down-arrow {
+  color: #d3d3d3;
+}

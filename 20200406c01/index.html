@@ -13,30 +13,35 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#01579B">
+  <meta name="theme-color" content="#0E0D10">
   <meta name="description" content="我的生活">
   <meta name="author" content="Frieren Chan">
   <meta name="keywords" content="">
   <title>Excel冲浪（01）：用VBA与网页进行交互 - Frieren&#39;s Blog</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
 
   <link  rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css" />
 
+
+
+
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
 <!-- 自定义样式保持在最底部 -->
+
+  
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+  
 
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Frieren's Blog" type="application/atom+xml">
@@ -63,65 +68,55 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">主页</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              首页</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">归档</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              归档</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">分类</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              分类</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">标签</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              标签</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">关于</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              关于</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="mailto:frierencn@gmail.com">联系我</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/links/">友链</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">RSS</a>
+            <a class="nav-link" href="/links/">
+              <i class="iconfont icon-link-fill"></i>
+              友链</a>
           </li>
         
         
@@ -139,7 +134,7 @@
          style="background: url('https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/excel冲浪01cover_post.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -147,31 +142,36 @@
 
             
               
-                <p class="mt-3 post-meta">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  星期一, 四月 6日 2020, 9:27 晚上
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-04-06 21:27">
+                    星期一, 四月 6日 2020, 9:27 晚上
+                  </time>
+                </div>
               
 
-              <p class="mt-1">
+              <div class="mt-1">
                 
                   
-                  <span class="post-meta">
-                    <i class="far fa-chart-bar"></i>
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
                     3.2k 字
                   </span>
                 
 
                 
                   
-                  <span class="post-meta">
-                      <i class="far fa-clock"></i>
-                      12 分钟
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    38
+                     分钟
                   </span>
                 
 
                 
-              </p>
+              </div>
             
           </div>
 
@@ -190,22 +190,22 @@
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5 z-depth-3" id="board">
+        <div class="py-5" id="board">
           <div class="post-content mx-auto" id="post">
             
-              <p
-                class="note note-warning">本文最后更新于：星期一, 四月 6日 2020, 9:43 晚上</p>
+              <p class="note note-warning">
+                本文最后更新于：星期五, 四月 24日 2020, 1:21 凌晨
+              </p>
             
-            <div class="markdown-body">
+            <article class="markdown-body">
               <p>最近由于工作需要，开始慢慢接触VBA，为同事制作了几个能解决重复劳动的模板——如果能高效，谁不想要呢？因为这个原因，所以想慢慢更新一个关于Excel（尤其是VBA在Excel中的应用）使用的系列，一方面是自己的总结学习，另一方面或许可以帮到别人。</p>
 <p>VBA终究是一门编程语言，我也不是专业人士，所以我的介绍总是处于某个情境之中（所以通常比较狭隘）、所使用的代码只是为了解决实际问题（所以通常不是最优的，也不够简洁），所以如果你在我任何一篇文章中看到了代码，只要把它当作婴儿的牙牙学语即可——想要说些什么，但总说得不完美。</p>
-<hr>
-<h2 id="情景介绍："><a href="#情景介绍：" class="headerlink" title="情景介绍："></a>情景介绍：</h2><p>负责报销业务的同事需要制作一个报销明细表，里面有报销人的姓名、银行卡号、银行名称和开户行地址（开户行所在地级市）。员工报销费用时，登记的信息是工号、姓名和金额，而银行卡信息是从员工系统中导出来的。有些员工当初提供银行卡信息时没有提供开户行地址，所以我想解决的问题是补充完整这些空白的开户行信息。</p>
+<h2 id="1-情景介绍："><a href="#1-情景介绍：" class="headerlink" title="1 情景介绍："></a>1 情景介绍：</h2><p>负责报销业务的同事需要制作一个报销明细表，里面有报销人的姓名、银行卡号、银行名称和开户行地址（开户行所在地级市）。员工报销费用时，登记的信息是工号、姓名和金额，而银行卡信息是从员工系统中导出来的。有些员工当初提供银行卡信息时没有提供开户行地址，所以我想解决的问题是补充完整这些空白的开户行信息。</p>
 <p>在此之前，我同事的解决方法是：不管他有没有开户行，开户行地址一列全部填上“广州市”（公司所在地）。简单粗暴，但应该是挺好用的，不然他也不会一直用了七八年，直至今年年初更换了财务系统后才让我帮忙重新设计一个模板以满足其报销业务的账务处理需求。</p>
 <p>刚开始我的处理方法是：如果员工提供了开户行地址的，我会把地址中的地级市提取出来；如果没有开户行地址的，也是简单粗暴地填上“广州市”。</p>
-<p>再后来，我无意中在网上发现了一些可以查询开户行地址的网站，例如<a href="http://www.chakahao.com/" target="_blank" rel="noopener">卡号网</a>、<a href="http://www.9527cha.com/" target="_blank" rel="noopener">银行卡号归属地查询</a>等，不过基本都有查询次数限制。后来我在excelhome论坛看到了一篇希望根据银行卡号批量查询开户行地址的<a href="http://club.excelhome.net/thread-1444743-1-1.html" target="_blank" rel="noopener">求助帖</a>，求助者的代码里有提到另一个<a href="http://bank.55cha.com/" target="_blank" rel="noopener">查询网站</a>。这个网站是不限次数，并且其html地址的结构是 <code>http://bank.55cha.com/&quot;银行卡号&quot;.html</code>。这就使问题得到了简化，在VBA中就不需要实现打开网页中输入内容、点击按钮的功能了，直接打开网页然后返回信息就好。</p>
-<h2 id="VBA代码"><a href="#VBA代码" class="headerlink" title="VBA代码"></a>VBA代码</h2><p>我刚开始找到的查询网站是需要输入内容然后点击按钮查询的，所以也查找了如何使用VBA实现网页内容输入和按钮点击的相关内容。下面会以两种方式实现归属地查询功能，第一种是使用IE对象（在网页中输入内容、单击按钮）；另一种是使用HTTP对象（这种方法要更快）。</p>
-<h3 id="IE对象法"><a href="#IE对象法" class="headerlink" title="IE对象法"></a>IE对象法</h3><p>注意：如果你使用360浏览器并将其设置为默认浏览器的话，将会导致该方法失效！</p>
+<p>再后来，我无意中在网上发现了一些可以查询开户行地址的网站，例如<span class="label label-default"><a href="http://www.chakahao.com/" target="_blank" rel="noopener">卡号网</a>、<a href="http://www.9527cha.com/" target="_blank" rel="noopener">银行卡号归属地查询</a></span>等，不过基本都有查询次数限制。后来我在excelhome论坛看到了一篇希望根据银行卡号批量查询开户行地址的<span class="label label-default"><a href="http://club.excelhome.net/thread-1444743-1-1.html" target="_blank" rel="noopener">求助帖</a></span>，求助者的代码里有提到另一个<span class="label label-default"><a href="http://bank.55cha.com/" target="_blank" rel="noopener">查询网站</a></span>。这个网站是不限次数，并且其html地址的结构是 <code>http://bank.55cha.com/&quot;银行卡号&quot;.html</code>。这就使问题得到了简化，在VBA中就不需要实现打开网页中输入内容、点击按钮的功能了，直接打开网页然后返回信息就好。</p>
+<h2 id="2-VBA代码"><a href="#2-VBA代码" class="headerlink" title="2 VBA代码"></a>2 VBA代码</h2><p>我刚开始找到的查询网站是需要输入内容然后点击按钮查询的，所以也查找了如何使用VBA实现网页内容输入和按钮点击的相关内容。下面会以两种方式实现归属地查询功能，第一种是使用IE对象（在网页中输入内容、单击按钮）；另一种是使用HTTP对象（这种方法要更快）。</p>
+<h3 id="2-1-IE对象法"><a href="#2-1-IE对象法" class="headerlink" title="2.1  IE对象法"></a>2.1  IE对象法</h3><p>注意：如果你使用360浏览器并将其设置为默认浏览器的话，将会导致该方法失效！</p>
 <p>在写代码之前要先在VBA编辑器的“工具”—“引用”里勾选以下两个引用：</p>
 <ul>
 <li>Microsoft HTML Object Library</li>
@@ -256,7 +256,7 @@
 End Sub
 </code></pre>
 <p>整个函数过程并不复杂，思路也很清晰。“打开浏览器——输入地址——获取输入框和按钮——返回网页元素——从中提取出我们想要的信息”。整个过程唯一麻烦的地方如何在源代码中找到我们想要的元素（如输入框、按钮和查询结果），这个步骤的复杂程度取决于网页HTML文档的结构。我们如何解构HTML文档也会影响到提取信息的复杂程度，上面的代码使用的提取方法算是比较“木讷”的。</p>
-<h3 id="HTTP对象法"><a href="#HTTP对象法" class="headerlink" title="HTTP对象法"></a>HTTP对象法</h3><p>HTTP对象法会比IE对象法快很多（对于配置不好的电脑来说更明显），因为毕竟IE对象法是打开了IE浏览器应用的。本节将会用HTTP对象来获取网页内容，并用一种更加清晰明朗的方式来提取我们想要的信息。</p>
+<h3 id="2-2-HTTP对象法"><a href="#2-2-HTTP对象法" class="headerlink" title="2.2 HTTP对象法"></a>2.2 HTTP对象法</h3><p>HTTP对象法会比IE对象法快很多（对于配置不好的电脑来说更明显），因为毕竟IE对象法是打开了IE浏览器应用的。本节将会用HTTP对象来获取网页内容，并用一种更加清晰明朗的方式来提取我们想要的信息。</p>
 <pre><code class="lang-vb">Function BankAdress(s As String) As String
     Dim sSiteName As String
     Dim ss As String
@@ -308,33 +308,29 @@ End Function
 中国工商银行622208360201221银行卡信息,银行卡归属地:广东省广州,开户行:中国工商银行,银行卡种:借记卡,银行卡名:理财金卡,银行卡持卡人信息,银行卡身份证信息。
 </code></pre>
 <p>哪个方便提取目标信息就使用哪个。怎样判断哪个更方便呢？我们提取目标信息的常用方法是使用split函数，将信息层层分割，最终得到目标信息。当然也可以使用excel里的截取函数（例如mid，其引用语法为<code>Application.mid()</code>）。如果要对信息进行分割的话，目标信息前后如果存在特定的字符就好分割，否则就难分割。如果我们想提取的是开户行的地级市（这是我的需求），那第18个/DIV/会方便一些，因为其地级市前面是“<code>-</code>”，后面其实有一个空格加换行符（vbCrLf），即使是直辖市，其结构也是这样的（例如地址为上海的话，会显示“上海市 - 上海”），这种情形下目标信息（地级市）前后的字符都是特定的，所以提取会更方便一些。第20个/DIV/里地级市前面是省级行政区，所以地级市前面的字符可能是省、区、市，而地级市后面的字符倒是固定的“<code>,</code>”，如果要用第20个/DIV/进行提取的话，就需要先对块的内容进行判断，判断省级行政区是以什么字结尾的（省、区或者市），然后再进行分割。（判断的方法：直接判断块里的内容是否含有”省、区、市“三个字符中的一个即可，使用 <code>like</code>进行判断）</p>
-<h2 id="形象地查看HTML文档"><a href="#形象地查看HTML文档" class="headerlink" title="形象地查看HTML文档"></a>形象地查看HTML文档</h2><p>我们如果不懂HTML语言的话，查看VBA程序返回的HTML文档将会是一头雾水——我们很难知道那一块块代码究竟意味着什么，它们对应了网页上的哪些内容。浏览器一般提供了查看网页源代码的工具（按F12可以快速打开源代码视窗），而Chrome浏览器则更进一步，当你把鼠标悬停在某行网页源代码上面时，网页中的相关内容将会进行高亮标注，告诉你这条代码“看起来”是什么样的。（现在chromium内核的Microsoft Edge也可以了）</p>
+<h2 id="3-形象地查看HTML文档"><a href="#3-形象地查看HTML文档" class="headerlink" title="3 形象地查看HTML文档"></a>3 形象地查看HTML文档</h2><p>我们如果不懂HTML语言的话，查看VBA程序返回的HTML文档将会是一头雾水——我们很难知道那一块块代码究竟意味着什么，它们对应了网页上的哪些内容。浏览器一般提供了查看网页源代码的工具（按F12可以快速打开源代码视窗），而Chrome浏览器则更进一步，当你把鼠标悬停在某行网页源代码上面时，网页中的相关内容将会进行高亮标注，告诉你这条代码“看起来”是什么样的。（现在chromium内核的Microsoft Edge也可以了）</p>
 <p>这一功能非常好用。在IE对象法里，我就是用这个功能层层递进，最终找到输入框和按钮所对应的代码块的。</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/202001通过Edge的高亮功能寻找输入框的代码_post.png" srcset="/img/loading.gif" alt="通过Edge的高亮功能寻找输入框的代码"></p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/202001通过Edge的高亮功能寻找按钮的代码_post.png" srcset="/img/loading.gif" alt="通过Edge的高亮功能寻找按钮的代码"></p>
 <hr>
 <p>本文的代码主要参考（Copy）了以下文章：</p>
-<ul>
-<li><a href="https://blog.csdn.net/lufy_legend/article/details/25191765" target="_blank" rel="noopener">用程序来控制一个网页，实现自动输入等操作</a></li>
-<li><a href="https://www.encodedna.com/excel/extract-contents-from-html-element-of-a-webpage-in-excel-using-vba.htm" target="_blank" rel="noopener">Extract or Get data from HTML Element in Excel using VBA</a> </li>
-</ul>
+<p><span class="label label-default">- <a href="https://blog.csdn.net/lufy_legend/article/details/25191765" target="_blank" rel="noopener">用程序来控制一个网页，实现自动输入等操作</a></span><br><span class="label label-default">- <a href="https://www.encodedna.com/excel/extract-contents-from-html-element-of-a-webpage-in-excel-using-vba.htm" target="_blank" rel="noopener">Extract or Get data from HTML Element in Excel using VBA</a> </span></p>
 
-            </div>
+            </article>
             <hr>
             <div>
-              <p>
+              <div class="post-metas mb-3">
                 
-                  <span>
-                <i class="iconfont icon-inbox"></i>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
                     
                       <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/">计算机技术</a>
-                      &nbsp;
                     
-                  </span>&nbsp;&nbsp;
+                  </div>
                 
                 
-                  <span>
-                <i class="iconfont icon-tag"></i>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/Excel/">Excel</a>
                     
@@ -342,9 +338,9 @@ End Function
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%88%E7%8E%87/">效率</a>
                     
-                  </span>
+                  </div>
                 
-              </p>
+              </div>
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
               
@@ -357,10 +353,10 @@ End Function
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2019/03/23/%E4%BA%BA%E4%B8%8E%E7%A4%BE%E4%BC%9A/">
+                      <a href="/20190323a01/">
                         <span class="hidden-mobile">人与社会</span>
                         <span class="visible-mobile">下一篇</span>
-                        <i class="fa fa-chevron-right"></i>
+                        <i class="iconfont icon-arrowright"></i>
                       </a>
                     
                   </div>
@@ -368,20 +364,22 @@ End Function
               
             </div>
 
-              
-                <!-- Comments -->
-                <div class="comments" id="comments">
-                  
-                  
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
   <div id="vcomments"></div>
   <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script defer src="https://cdn.staticfile.org/valine/1.3.10/Valine.min.js" ></script>
 
   <script type="text/javascript">
     var notify = 'false' === 'true';
     var verify = 'false' === 'true';
-    var oldLoad = window.onload;
+    var oldLoadVa = window.onload;
     window.onload = function () {
+      oldLoadVa && oldLoadVa();
+
       new Valine({
         el: '#vcomments',
         notify: notify,
@@ -390,27 +388,25 @@ End Function
         app_key: "OAPi8yitontIqqp8vohPWplv",
         placeholder: "～留言请遵循公序良俗～",
         avatar: "/retro",
-        meta: ['nick', 'mail', 'link'],
+        meta: ["nick","mail","link"],
         pageSize: "10",
       });
-      oldLoad && oldLoad();
     };
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
       powered by Valine.</a></noscript>
 
 
-                </div>
-              
+              </div>
+            
           </div>
         </div>
       </div>
     </div>
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc-start"></div>
-<div id="toc">
-  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div id="tocbot"></div>
 </div>
 
@@ -426,8 +422,8 @@ End Function
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -462,9 +458,10 @@ End Function
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
       <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
     </div>
     
 
@@ -476,9 +473,7 @@ End Function
 
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
 <script  src="/js/main.js" ></script>
 
 
@@ -490,31 +485,9 @@ End Function
   <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
   <script>
     $(document).ready(function () {
-      var navHeight = $('#navbar').height();
-      var toc = $('#toc');
       var boardCtn = $('#board-ctn');
       var boardTop = boardCtn.offset().top;
-      var tocLimMax = 2 * boardTop + boardCtn.height();
 
-      $(window).scroll(function () {
-        var tocLimMin = $('#toc-start').offset().top - navHeight;
-        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
-
-        if (tocLimMin <= scroH && scroH <= tocLimMax) {
-          toc.css({
-            'display': 'block',
-            'position': 'fixed',
-            'top': navHeight,
-          });
-        } else if (scroH <= tocLimMin) {
-          toc.css({
-            'position': '',
-            'top': '',
-          });
-        } else if (scroH > tocLimMax) {
-          toc.css('display', 'none');
-        }
-      });
       tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post-content',
@@ -524,16 +497,13 @@ End Function
         listClass: 'tocbot-list',
         isCollapsedClass: 'tocbot-is-collapsed',
         collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
         scrollSmooth: true,
         headingsOffset: -boardTop
       });
       if ($('.toc-list-item').length > 0) {
-        $('#toc > p').css('visibility', 'visible');
+        $('#toc').css('visibility', 'visible');
       }
-      var offset = boardCtn.css('margin-right')
-      $('#toc-ctn').css({
-        'right': offset
-      })
     });
   </script>
 
@@ -543,10 +513,6 @@ End Function
 
   <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
   <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
 
 
 
@@ -560,7 +526,13 @@ End Function
   <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
@@ -616,17 +588,25 @@ End Function
 
 
 
-  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
 
 
 

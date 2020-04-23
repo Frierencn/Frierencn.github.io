@@ -13,30 +13,35 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#01579B">
+  <meta name="theme-color" content="#0E0D10">
   <meta name="description" content="我的生活">
   <meta name="author" content="Frieren Chan">
   <meta name="keywords" content="">
   <title>使用 Hexo+Github Pages 搭建个人博客的笔记 - Frieren&#39;s Blog</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
 
   <link  rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css" />
 
+
+
+
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
 <!-- 自定义样式保持在最底部 -->
+
+  
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+  
 
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Frieren's Blog" type="application/atom+xml">
@@ -63,65 +68,55 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">主页</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              首页</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">归档</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              归档</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">分类</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              分类</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">标签</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              标签</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">关于</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              关于</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="mailto:frierencn@gmail.com">联系我</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/links/">友链</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">RSS</a>
+            <a class="nav-link" href="/links/">
+              <i class="iconfont icon-link-fill"></i>
+              友链</a>
           </li>
         
         
@@ -139,7 +134,7 @@
          style="background: url('https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/Hexo&GithubPage.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -147,31 +142,36 @@
 
             
               
-                <p class="mt-3 post-meta">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  星期一, 九月 18日 2017, 11:57 中午
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2017-09-18 11:57">
+                    星期一, 九月 18日 2017, 11:57 中午
+                  </time>
+                </div>
               
 
-              <p class="mt-1">
+              <div class="mt-1">
                 
                   
-                  <span class="post-meta">
-                    <i class="far fa-chart-bar"></i>
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
                     2.5k 字
                   </span>
                 
 
                 
                   
-                  <span class="post-meta">
-                      <i class="far fa-clock"></i>
-                      8 分钟
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    26
+                     分钟
                   </span>
                 
 
                 
-              </p>
+              </div>
             
           </div>
 
@@ -190,95 +190,95 @@
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5 z-depth-3" id="board">
+        <div class="py-5" id="board">
           <div class="post-content mx-auto" id="post">
             
-              <p
-                class="note note-warning">本文最后更新于：星期五, 十二月 6日 2019, 10:57 上午</p>
+              <p class="note note-warning">
+                本文最后更新于：星期五, 四月 24日 2020, 1:24 凌晨
+              </p>
             
-            <div class="markdown-body">
+            <article class="markdown-body">
               <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26349704&auto=0&height=66"></iframe>
 
 <p>（注：此音乐插件为一个测试，可以点击播放~）</p>
 <hr>
-<blockquote>
-<p>updated20191206: 本文中所引用到的部分文章链接已经失效了，可能是文章作者不再维护他的博客。</p>
-</blockquote>
-<h1 id="1-搭建的基本工作"><a href="#1-搭建的基本工作" class="headerlink" title="1 搭建的基本工作"></a>1 搭建的基本工作</h1><h2 id="1-1-一些工具推荐"><a href="#1-1-一些工具推荐" class="headerlink" title="1.1 一些工具推荐"></a>1.1 一些工具推荐</h2><blockquote>
-<p>工欲善其事，必先利其器。</p>
-</blockquote>
+<div class="note note-warning">
+            <p>updated20191206: 本文中所引用到的部分文章链接已经失效了，可能是文章作者不再维护他的博客。</p>
+          </div>
+<h1 id="1-搭建的基本工作"><a href="#1-搭建的基本工作" class="headerlink" title="1 搭建的基本工作"></a>1 搭建的基本工作</h1><h2 id="1-1-一些工具推荐"><a href="#1-1-一些工具推荐" class="headerlink" title="1.1 一些工具推荐"></a>1.1 一些工具推荐</h2><div class="note note-success">
+            <p>工欲善其事，必先利其器。</p>
+          </div>
 <p>当你在搭建个人博客的过程中，有多处涉及到修改相关文件的内容，例如站点的配置文件 <code>_config.yml</code> ，里面的内容都是相关的代码，所有需要修改的这些文件你都可以通过Windows系统里自带的笔记本（Notepad）来打开，不过因为笔记本里显示的是纯文本，不同功能的代码也没有使用不同的颜色进行标记，所以阅读和查找起来比较麻烦。Notepad++是一款轻量级的文本编辑工具，可以看作是系统自带的笔记本的加强版，它支持语法高亮和语法折叠，很适合用来进行简单的代码编写和修改。</p>
-<p><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener"><strong>下载地址：Notepad++官网</strong></a></p>
+<p><span class="label label-default"><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener"><strong>下载地址：Notepad++官网</strong></a></span></p>
 <p>此外，当你建成博客之后，你是在本地使用markdown格式来写文章的。Markdown是一种轻量级的标记语言，一大特点就是让你专心于你的写作而不是你文章的排版。只要掌握一些基本的常用语法，如各级标题的表示方法、加粗、斜体等，基本就可以进行文章写作了。下面这两篇文章可以帮助你了解什么是Markdown，以及如何使用Markdown。</p>
-<p><a href="http://xianbai.me/learn-md/article/about/readme.html" target="_blank" rel="noopener"><strong>Learning-Markdown (Markdown 入门参考)</strong></a></p>
-<p><a href="http://whuhan2013.github.io/blog/2015/09/19/markdown-simple-grammar/" target="_blank" rel="noopener"><strong>Markdown 简明语法参考</strong></a></p>
+<p><span class="label label-default"><a href="http://xianbai.me/learn-md/article/about/readme.html" target="_blank" rel="noopener"><strong>Learning-Markdown (Markdown 入门参考)</strong></a></span></p>
+<p><span class="label label-default"><a href="http://whuhan2013.github.io/blog/2015/09/19/markdown-simple-grammar/" target="_blank" rel="noopener"><strong>Markdown 简明语法参考</strong></a></span></p>
 <p>你可以直接使用系统自带的笔记本或上面提到的Notepad++来进行写作，但专业的Markdown编辑器可能会给你更好的体验。我使用的是 Windows系统，Windows上比较少优秀的Markdown编辑器，我目前在用的、个人觉得非常不错的编辑器是 Typora。Typora 刚开始时仅有Mac端，不过现在也有Windows端的了。</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/Typora.jpg" srcset="/img/loading.gif" alt="Typora"></p>
-<p><a href="https://typora.io/" target="_blank" rel="noopener"><strong>下载地址：Typora — a minimal markdown editor, markdown reader.</strong></a></p>
+<p><span class="label label-default"><a href="https://typora.io/" target="_blank" rel="noopener"><strong>下载地址：Typora — a minimal markdown editor, markdown reader.</strong></a></span></p>
 <h2 id="1-2-开始搭建工作"><a href="#1-2-开始搭建工作" class="headerlink" title="1.2 开始搭建工作"></a>1.2 开始搭建工作</h2><p>下面的文章会帮助你从无到有的搭建出一个初具框架的个人博客。</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/Hexo.jpg" srcset="/img/loading.gif" alt="Hexo"></p>
-<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"><strong>Hexo: 快速、简洁且高效的博客框架</strong></a></p>
+<p><span class="label label-default"><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"><strong>Hexo: 快速、简洁且高效的博客框架</strong></a></p>
 <p>这是 Hexo 的官网，阅读里面的文档可以使你对Hexo的搭建及其使用有一个了解，里面也介绍了如何安装 Hexo 和使用它进行建站，以及后续的进行写作的指引。</p>
-<p><a href="http://xuhaoblog.com/hexo-github-pages.html" target="_blank" rel="noopener"><strong>基于Hexo+GitHub Pages 搭建个人博客教程</strong></a></p>
-<p><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener"><strong>使用hexo+github搭建免费个人博客详细教程</strong></a></p>
-<p><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener"><strong>手把手教你使用Hexo + Github Pages搭建个人独立博客</strong></a></p>
-<p><a href="http://www.jianshu.com/p/a39573555039" target="_blank" rel="noopener"><strong>使用hexo+github免费搭建个人博客网站超详细教程</strong></a></p>
+<p><span class="label label-default"><a href="http://xuhaoblog.com/hexo-github-pages.html" target="_blank" rel="noopener"><strong>基于Hexo+GitHub Pages 搭建个人博客教程</strong></a></span></p>
+<p><span class="label label-default"><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener"><strong>使用hexo+github搭建免费个人博客详细教程</strong></a></span></p>
+<p><span class="label label-default"><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener"><strong>手把手教你使用Hexo + Github Pages搭建个人独立博客</strong></a></span></p>
+<p><span class="label label-default"><a href="http://www.jianshu.com/p/a39573555039" target="_blank" rel="noopener"><strong>使用hexo+github免费搭建个人博客网站超详细教程</strong></a></span></p>
 <p>以上四篇文章可以交叉着来看，它们基本上都是按照以下结构写作的：</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/部署Hexo的流程.jpg" srcset="/img/loading.gif" alt="教程框架"></p>
 <p>当你对某一篇文章的某一部分感到疑惑时，可以参考其他文章对相关部分的介绍，也许可以解决你的疑惑。</p>
 <p>对于那些和我一样从来没接触过Git的人来说，需要注意的一点是：所有代码命令都可以在Git上进行，有一些也可以在Windows的cmd中进行，但建议统一使用Git，这样不会乱。此外，在安装Hexo和初始化你将来用于存放博客代码和文件的文件夹时，虽然上面四篇文章使用的命令都是一样的，但是在具体的操作上又有不同。</p>
-<h1 id="2-进一步的完善工作：让你的博客更有个性"><a href="#2-进一步的完善工作：让你的博客更有个性" class="headerlink" title="2 进一步的完善工作：让你的博客更有个性"></a>2 进一步的完善工作：让你的博客更有个性</h1><h2 id="2-1-个性的主题"><a href="#2-1-个性的主题" class="headerlink" title="2.1 个性的主题"></a>2.1 个性的主题</h2><blockquote>
-<p>人靠衣装，佛靠金装。</p>
-</blockquote>
-<p>进一步的完善工作主要集中于选择一个自己喜欢的主题，然后对该主题进行个性化的修改。主题就是你博客的外观。<a href="https://hexo.io/themes/" target="_blank" rel="noopener"><strong>Hexo 的官网</strong></a> 为我们提供主题参考，在该网站中，如果你点击图片，你就会进入到使用了该主题的博客，它们是主题作者们的博客。如果你喜欢某一主题，你可以点击图片下面的主题名称，然后你会跳转到Github中主题作者存放该主题的目录下。前面的三篇文章都介绍了如何下载一个主题，我在这里遇到过一个问题：有的教程会在主题地址后面加上 <code>.git</code> ，有的教程后面没有加，我并不清楚这是为什么。</p>
+<h1 id="2-进一步的完善工作：让你的博客更有个性"><a href="#2-进一步的完善工作：让你的博客更有个性" class="headerlink" title="2 进一步的完善工作：让你的博客更有个性"></a>2 进一步的完善工作：让你的博客更有个性</h1><h2 id="2-1-个性的主题"><a href="#2-1-个性的主题" class="headerlink" title="2.1 个性的主题"></a>2.1 个性的主题</h2><div class="note note-success">
+            <p>人靠衣装，佛靠金装。</p>
+          </div>
+<p>进一步的完善工作主要集中于选择一个自己喜欢的主题，然后对该主题进行个性化的修改。主题就是你博客的外观。<span class="label label-default"><a href="https://hexo.io/themes/" target="_blank" rel="noopener"><strong>Hexo 的官网</strong></a> </span>为我们提供主题参考，在该网站中，如果你点击图片，你就会进入到使用了该主题的博客，它们是主题作者们的博客。如果你喜欢某一主题，你可以点击图片下面的主题名称，然后你会跳转到Github中主题作者存放该主题的目录下。前面的三篇文章都介绍了如何下载一个主题，我在这里遇到过一个问题：有的教程会在主题地址后面加上 <code>.git</code> ，有的教程后面没有加，我并不清楚这是为什么。</p>
 <p>当你安装好自己喜欢的主题后，你可以使用前面提到的 <code>hexo g</code> 和 <code>hexo s</code> 来预览效果。接下来的很多工作就是对你所选择的主题进行修改，例如增加多一个菜单项，添加一个站内搜索功能等，此时你可以基于自己选择的主题到去搜索相关的教程。你可以在Github的该主题仓库里找到作者对该主题的介绍和使用，在 <code>Issues</code> 项下，你可以找到使用者们就某一问题或功能的讨论，那里是你寻找问题解决方法的好去处。</p>
-<p>目前我的博客使用的主题是 <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a>，其特点是简洁与大量留白，如果你也喜欢这一主题，那么下面这些网站或文章可能会帮助到你。【update-2017.10.15：目前我的博客已改用<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener"><strong>yilia</strong></a>主题~，其作者是<a href="http://litten.me/" target="_blank" rel="noopener"><strong>Litten</strong></a>】【update-2019.03.19：目前博客主题已更换为<a href="https://github.com/viosey/hexo-theme-material" target="_blank" rel="noopener">Material Theme</a>】</p>
+<p>目前我的博客使用的主题是<span class="label label-default"> <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT</a></span>，其特点是简洁与大量留白，如果你也喜欢这一主题，那么下面这些网站或文章可能会帮助到你。【update-2017.10.15：目前我的博客已改用<span class="label label-default"><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener"><strong>yilia</strong></a></span>主题~，其作者是<span class="label label-default"><a href="http://litten.me/" target="_blank" rel="noopener"><strong>Litten</strong></a></span>】【update-2019.03.19：目前博客主题已更换为<span class="label label-default"><a href="https://github.com/viosey/hexo-theme-material" target="_blank" rel="noopener">Material Theme</a></span>】【update-2020.04.23：目前博客主题已更换为<span class="label label-default"><a href="https://hexo.fluid-dev.com/docs/" target="_blank" rel="noopener">Fluid</a></span>】</p>
 <p>关于Material主题需要补充介绍两点：</p>
 <ol>
-<li>Github中列示的介绍文档地址由于网站证书问题已经无法访问，新的介绍文档可点击<a href="https://neko-dev.github.io/material-theme-docs/#/" target="_blank" rel="noopener">这里</a>访问；</li>
-<li>主题中 <code>layout/_widget/dnsprefetch.ejs</code> 文件存在错误，会导致 <code>hexo g</code> 与 <code>hexo s</code> 命令出错，解决方法参考此<a href="https://github.com/viosey/hexo-theme-material/issues/686" target="_blank" rel="noopener">issue</a>。</li>
+<li>Github中列示的介绍文档地址由于网站证书问题已经无法访问，新的介绍文档可点击<span class="label label-default"><a href="https://neko-dev.github.io/material-theme-docs/#/" target="_blank" rel="noopener">这里</a></span>访问；</li>
+<li>主题中 <code>layout/_widget/dnsprefetch.ejs</code> 文件存在错误，会导致 <code>hexo g</code> 与 <code>hexo s</code> 命令出错，解决方法参考此<span class="label label-default"><a href="https://github.com/viosey/hexo-theme-material/issues/686" target="_blank" rel="noopener">issue</a></span>。</li>
 </ol>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/NexT.jpg" srcset="/img/loading.gif" alt="NexT"></p>
-<p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener"><strong>NexT: 精于心 简于形（官网）</strong></a></p>
-<p><a href="http://notes.iissnan.com/" target="_blank" rel="noopener"><strong>IlssNan’s, NexT作者的博客</strong></a></p>
-<p><a href="http://www.jeyzhang.com/next-theme-personal-settings.html" target="_blank" rel="noopener"><strong>NexT 主题个性化设置</strong></a></p>
-<p><a href="http://www.vitah.net/posts/20f300cc/" target="_blank" rel="noopener"><strong>Hexo Next 主题设置和优化</strong></a>【updated-2019.03.21: 该链接已失效】</p>
+<p><span class="label label-default"><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener"><strong>NexT: 精于心 简于形（官网）</strong></a></span></p>
+<p><span class="label label-default"><a href="http://notes.iissnan.com/" target="_blank" rel="noopener"><strong>IlssNan’s, NexT作者的博客</strong></a></span></p>
+<p><span class="label label-default"><a href="http://www.jeyzhang.com/next-theme-personal-settings.html" target="_blank" rel="noopener"><strong>NexT 主题个性化设置</strong></a></span></p>
+<p><span class="label label-default"><a href="http://www.vitah.net/posts/20f300cc/" target="_blank" rel="noopener"><strong>Hexo Next 主题设置和优化</strong></a></span>【updated-2019.03.21: 该链接已失效】</p>
 <h2 id="2-2-自由的域名"><a href="#2-2-自由的域名" class="headerlink" title="2.2 自由的域名"></a>2.2 自由的域名</h2><p>我们建立的博客是托管在Github上的，所以我们博客的地址是Github的二级域名，例如，我的博客域名是 frierencn.github.io 。如果你希望自己的博客可以有一个自由个性的域名，你可以去域名提供商那里注册一个域名（当然是需要付费的）。域名提供商有不少，国内的有阿里云、腾讯云等，国外的有Godaddy（支持支付宝付款）等。至于是选择国内的域名提供商还是国外的，可以根据个人的需要来决定。以下两篇文章可以帮助你稍微了解一下国内和国外域名注册的区别：</p>
-<p><a href="http://www.williamlong.info/archives/3852.html" target="_blank" rel="noopener"><strong>月光博客：国内国外注册域名的对比</strong></a></p>
-<p><a href="http://www.laodong.me/qubie/" target="_blank" rel="noopener"><strong>浅谈国内域名注册商与国外域名注册商的区别与优势</strong></a></p>
-<p>当你决定要注册一个域名的时候，你不仅要想域名的主体（如我的域名主体就是 <code>frieren</code> ），你还要选择一个域名后缀（如我的域名后缀就是 <code>.me</code> ，它其实是黑山共和国（Montenegro）的国家域名，就像 <code>.cn</code> 是中国的域名一样，但由于它和英语单词 me 一样，所以很多个人博客都拿它来当域名后缀了~)。常见的域名后缀有 <code>.com</code> , <code>.net</code> 等，国内的域名提供商会提供 <code>.cn</code> 后缀，但<a href="http://www.williamlong.info/archives/1654.html" target="_blank" rel="noopener"><strong>不建议使用</strong></a>~你可以去了解一下相关域名后缀的含义再作出决定也不迟。</p>
-<p>当你注册好域名之后就需要进行DNS设置了。更多的介绍请阅读<a href="http://blog.zfan.me/2015/09/03/%E4%B8%BA%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E6%80%A7%E5%9F%9F%E5%90%8D/" target="_blank" rel="noopener"><strong>为部署在Github上的Hexo博客绑定个性域名</strong></a>【updated-2019.03.21: 该链接已失效】。当你为自己的博客绑定了一个自己的域名后，又有一些工作接踵而至了——你需要进行SEO优化，以便让搜索引擎更容易找到你的博客。关于这些内容以及其他更多个性化配置内容可以参考<a href="https://yangbingdong.com/2017/build-blog-hexo-advanced/" target="_blank" rel="noopener"><strong>基于Hexo搭建个人博客——进阶篇(从入门到入土)</strong></a>。</p>
-<h1 id="3-一个问题：如何设置favicon图标"><a href="#3-一个问题：如何设置favicon图标" class="headerlink" title="3 一个问题：如何设置favicon图标"></a>3 一个问题：如何设置favicon图标</h1><p>上面的第三篇文章<a href="http://www.jeyzhang.com/next-theme-personal-settings.html" target="_blank" rel="noopener"><strong>NexT 主题个性化设置</strong></a>有详细地介绍到如何设置favicon图标。对于什么是favicon图标，可以看下面这张图：</p>
+<p><span class="label label-default"><a href="http://www.williamlong.info/archives/3852.html" target="_blank" rel="noopener"><strong>月光博客：国内国外注册域名的对比</strong></a></span></p>
+<p><span class="label label-default"><a href="http://www.laodong.me/qubie/" target="_blank" rel="noopener"><strong>浅谈国内域名注册商与国外域名注册商的区别与优势</strong></a></span></p>
+<p>当你决定要注册一个域名的时候，你不仅要想域名的主体（如我的域名主体就是 <code>frieren</code> ），你还要选择一个域名后缀（如我的域名后缀就是 <code>.me</code> ，它其实是黑山共和国（Montenegro）的国家域名，就像 <code>.cn</code> 是中国的域名一样，但由于它和英语单词 me 一样，所以很多个人博客都拿它来当域名后缀了~)。常见的域名后缀有 <code>.com</code> , <code>.net</code> 等，国内的域名提供商会提供 <code>.cn</code> 后缀，但<span class="label label-default"><a href="http://www.williamlong.info/archives/1654.html" target="_blank" rel="noopener"><strong>不建议使用</strong></a></span>~你可以去了解一下相关域名后缀的含义再作出决定也不迟。</p>
+<p>当你注册好域名之后就需要进行DNS设置了。更多的介绍请阅读<span class="label label-default"><a href="http://blog.zfan.me/2015/09/03/%E4%B8%BA%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E6%80%A7%E5%9F%9F%E5%90%8D/" target="_blank" rel="noopener"><strong>为部署在Github上的Hexo博客绑定个性域名</strong></a></span>【updated-2019.03.21: 该链接已失效】。当你为自己的博客绑定了一个自己的域名后，又有一些工作接踵而至了——你需要进行SEO优化，以便让搜索引擎更容易找到你的博客。关于这些内容以及其他更多个性化配置内容可以参考<span class="label label-default"><a href="https://yangbingdong.com/2017/build-blog-hexo-advanced/" target="_blank" rel="noopener"><strong>基于Hexo搭建个人博客——进阶篇(从入门到入土)</strong></a></span>。</p>
+<h1 id="3-一个问题：如何设置favicon图标"><a href="#3-一个问题：如何设置favicon图标" class="headerlink" title="3 一个问题：如何设置favicon图标"></a>3 一个问题：如何设置favicon图标</h1><p>上面的第三篇文章<span class="label label-default"><a href="http://www.jeyzhang.com/next-theme-personal-settings.html" target="_blank" rel="noopener"><strong>NexT 主题个性化设置</strong></a></span>有详细地介绍到如何设置favicon图标。对于什么是favicon图标，可以看下面这张图：</p>
 <p><img src="https://gallery-1254425160.cos.ap-guangzhou.myqcloud.com/Post/什么是favicon.jpg" srcset="/img/loading.gif" alt="什么是favicon？"></p>
-<p>显然，有个favicon图标会让你的博客更加具有特色。但是当我按照教程去设置时，发现怎样都没法实现。我并不知道这是为什么，在网上找的相关资料也没有解决这个问题，最后在 NexT 的 Github <a href="https://github.com/iissnan/hexo-theme-next/issues/539" target="_blank" rel="noopener"><strong>Issues</strong></a>里找到了解决办法： 将favicon.ico图片放到next主题下的source，然后把<strong>next主题</strong>的配置文件 <code>_config.yml</code> 里关于favicon的代码改为</p>
+<p>显然，有个favicon图标会让你的博客更加具有特色。但是当我按照教程去设置时，发现怎样都没法实现。我并不知道这是为什么，在网上找的相关资料也没有解决这个问题，最后在 NexT 的 Github<span class="label label-default"> <a href="https://github.com/iissnan/hexo-theme-next/issues/539" target="_blank" rel="noopener"><strong>Issues</strong></a></span>里找到了解决办法： 将favicon.ico图片放到next主题下的source，然后把<strong>next主题</strong>的配置文件 <code>_config.yml</code> 里关于favicon的代码改为</p>
 <pre><code>favicon: images/favicon.ico
 </code></pre><p>这样就在我的网页标签上看到我的小狮子了~其他主题也是类似的设置。</p>
 <h1 id="4-后记"><a href="#4-后记" class="headerlink" title="4 后记"></a>4 后记</h1><p>当你做完以上的工作后，你发现你的博客已经有模有样了。也许你并没有相关的基础，花了一天才把这些工作做好（就像我一样（。＾▽＾）），但是当你看到你通过“依葫芦画瓢”地敲了许多条命令、改了许多行代码、遇到许多问题然后又被你耐心地解决后建立起来的、每个图标和文字都饱含你的努力和折腾的个人博客时，你感受到的不是辛苦而是喜悦，甚至还会有一点自豪。你对待它就像你对待那些你细心栽培出来的花草一样，也许你觉得它对你而言是独一无二的，就像宇宙中的某朵玫瑰花对小王子而言是独一无二的一样。</p>
 
-            </div>
+            </article>
             <hr>
             <div>
-              <p>
+              <div class="post-metas mb-3">
                 
-                  <span>
-                <i class="iconfont icon-inbox"></i>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
                     
                       <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/">计算机技术</a>
-                      &nbsp;
                     
-                  </span>&nbsp;&nbsp;
+                  </div>
                 
                 
-                  <span>
-                <i class="iconfont icon-tag"></i>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
                     
                       <a class="hover-with-bg" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
                     
-                  </span>
+                  </div>
                 
-              </p>
+              </div>
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
               
@@ -287,8 +287,8 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2017/10/19/%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98%EF%BC%9A%E5%9C%86%E4%B8%8E%E7%9F%A9%E5%BD%A2/">
-                        <i class="fa fa-chevron-left"></i>
+                      <a href="/20171019a01/">
+                        <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">一个数学问题：圆与矩形</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
@@ -302,20 +302,22 @@
               
             </div>
 
-              
-                <!-- Comments -->
-                <div class="comments" id="comments">
-                  
-                  
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
   <div id="vcomments"></div>
   <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script defer src="https://cdn.staticfile.org/valine/1.3.10/Valine.min.js" ></script>
 
   <script type="text/javascript">
     var notify = 'false' === 'true';
     var verify = 'false' === 'true';
-    var oldLoad = window.onload;
+    var oldLoadVa = window.onload;
     window.onload = function () {
+      oldLoadVa && oldLoadVa();
+
       new Valine({
         el: '#vcomments',
         notify: notify,
@@ -324,27 +326,25 @@
         app_key: "OAPi8yitontIqqp8vohPWplv",
         placeholder: "～留言请遵循公序良俗～",
         avatar: "/retro",
-        meta: ['nick', 'mail', 'link'],
+        meta: ["nick","mail","link"],
         pageSize: "10",
       });
-      oldLoad && oldLoad();
     };
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
       powered by Valine.</a></noscript>
 
 
-                </div>
-              
+              </div>
+            
           </div>
         </div>
       </div>
     </div>
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc-start"></div>
-<div id="toc">
-  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div id="tocbot"></div>
 </div>
 
@@ -360,8 +360,8 @@
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -396,9 +396,10 @@
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
       <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
     </div>
     
 
@@ -410,9 +411,7 @@
 
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
 <script  src="/js/main.js" ></script>
 
 
@@ -424,31 +423,9 @@
   <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
   <script>
     $(document).ready(function () {
-      var navHeight = $('#navbar').height();
-      var toc = $('#toc');
       var boardCtn = $('#board-ctn');
       var boardTop = boardCtn.offset().top;
-      var tocLimMax = 2 * boardTop + boardCtn.height();
 
-      $(window).scroll(function () {
-        var tocLimMin = $('#toc-start').offset().top - navHeight;
-        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
-
-        if (tocLimMin <= scroH && scroH <= tocLimMax) {
-          toc.css({
-            'display': 'block',
-            'position': 'fixed',
-            'top': navHeight,
-          });
-        } else if (scroH <= tocLimMin) {
-          toc.css({
-            'position': '',
-            'top': '',
-          });
-        } else if (scroH > tocLimMax) {
-          toc.css('display', 'none');
-        }
-      });
       tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post-content',
@@ -458,16 +435,13 @@
         listClass: 'tocbot-list',
         isCollapsedClass: 'tocbot-is-collapsed',
         collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
         scrollSmooth: true,
         headingsOffset: -boardTop
       });
       if ($('.toc-list-item').length > 0) {
-        $('#toc > p').css('visibility', 'visible');
+        $('#toc').css('visibility', 'visible');
       }
-      var offset = boardCtn.css('margin-right')
-      $('#toc-ctn').css({
-        'right': offset
-      })
     });
   </script>
 
@@ -477,10 +451,6 @@
 
   <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
   <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
 
 
 
@@ -494,7 +464,13 @@
   <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
@@ -550,17 +526,25 @@
 
 
 
-  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
 
 
 
